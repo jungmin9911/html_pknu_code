@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오 비디오 삽입</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url("../font/CookieRun\ Regular.ttf")
+                format("truetype");
+        }
+        body {
+            font-family: myfont;
+            background-image: linear-gradient(0deg, #ED9455, #FFFBDA);
+        }
+        h1{
+            background-color: #ED9455;
+            border-radius: 10px;
+            padding: 10px;
+            color: #FFFBDA;
+        }
+        h3 {
+            padding: 10px;
+        }
+        video{
+            border-radius: 30px;
+            height: 400px;
+            margin: 20px;
+        }
+        object{
+            width: 840px;
+        }
+        hr{
+            border: 2px dashed #C40C0C;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">홈으로</a>
+    <h1>오디오와 비디오 삽입하기</h1>
+    <h3>오디오 파일 재생</h3>
+    <audio src="../ref/youtube_JhnScGWwVj8_audio.mp3" controls loop></audio>
+    <hr/>
+    <h3>비디오 파일 재생</h3>
+    <video src="../ref/쉐도우밀크.mp4" id="sdm" autoplay loop muted></video>
+    <video src="../ref/🔥내 불꽃은 아무도 막을 수 없어!.mp4" width="400" controls autoplay loop muted></video>
+    <hr/>
+    <h3>pdf 파일 재생</h3>
+    <object data="../ref/32350.pdf" type="" width="500" height="900"></object>
+</body>
+</html>
