@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            height: 900px;
+            font-size: 3rem;
+        }
+        tr, td{
+            border: 1px solid #ccc;
+
+        }
+        #nav{
+            height: 10%;
+            background-color: antiquewhite;
+        }
+        #header, #footer{
+            height: 15%;
+            background-color: aquamarine;
+        }
+        .main-aside{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="../index.html">홈으로</a></p>
+    <table>
+        <colgroup>
+            <col style="width: 70%; background-color: blanchedalmond;">
+            <col>
+        </colgroup>
+        <tr id="header">
+            <td colspan="2">header</td>
+        </tr>
+        <tr id="nav">
+            <td colspan="2">nav</td>
+        </tr>
+        <tr class="main-aside">
+            <td style="background-color: wheat;">
+                main
+                <hr>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Cum ratione blanditiis reprehenderit officiis perferendis asperiores exercitationem omnis aliquid, quae impedit! 
+                Iste nemo praesentium fugiat quisquam. Maiores magni eum dolor veritatis.
+            </td>
+            <td>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Debitis ducimus accusamus laboriosam beatae sapiente minus exercitationem eveniet non ut! 
+                Sit, voluptates. Rerum soluta commodi ipsam nesciunt dolor aspernatur recusandae officiis.
+            </td>
+        </tr>
+        <tr id="footer">
+            <td colspan="2">footer</td>
+        </tr>
+    </table>
+</body>
+</html>

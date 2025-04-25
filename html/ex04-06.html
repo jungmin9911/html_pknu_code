@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합선택자</title>
+    <style>
+        /* div의 자손들 p들에 적용 */
+        div p { background-color: aqua; }
+
+        /* div의 바로 아래 p에만 적용 */
+        div > p{color:blue}
+
+        /* div + p { div의 인접 p에 적용 } */
+        div + p {
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">홈으로</a></p>
+    <h1>복합 선택자</h1>
+    <h2>Heading</h2>
+    <!-- div{안녕하세요}>p{child $}*2+span{반가워요}>p{grandchild}^^p{neighborhood child} -->
+    <div>
+        안녕하세요
+        <p>child 1</p>
+        <p>child 2</p>
+        <span>
+            반가워요
+            <p>grandchild</p>
+        </span>
+    </div>
+    <p>neighborhood child</p>
+</body>
+</html>

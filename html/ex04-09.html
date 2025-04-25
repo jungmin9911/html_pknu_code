@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: cornflowerblue;
+        }
+        a:visited{
+            color: green;
+        }
+        a:active{
+            color: red;
+        }
+        button:disabled, input:disabled {
+            background-color: seagreen;
+        }
+        input:active{
+            background-color: blue;
+        }
+        input:focus{
+            background-color: brown;
+        }
+        .red-focus:focus{
+            background-color: red;
+        }
+        .blue-focus:focus{
+            background-color: blue;
+        }
+        div{
+            border: 1px solid blueviolet;
+            width: 20px;
+            height: 20px;
+            margin: 1px;
+            background-color: darkcyan;
+            display: inline-block;
+        }
+        div:hover{
+            height: 40px;
+            background-color: yellow;
+        }
+        input[type]:checked + label{
+            color: red;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">홈으로</a></p>
+    <h1>가상선택자 응용</h1>
+    <a href="https://naver.com" disabled>네이버 링크</a>
+    <input type="text"/><button disabled>전송</button>
+    <hr>
+    <input type="text" class="red-focus" value="클릭하면 빨갛게 변합니다" />
+    <input type="text" class="blue-focus" value="클릭하면 파랗게 변합니다" />
+    <hr>
+    <input type="checkbox" id="eat"/>
+    <label for="eat">간식</label>
+    <input type="checkbox" id="meal"/>
+    <label for="meal">식사</label>
+    <hr>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <hr>
+</body>
+</html>
