@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url(../font/PyeongChangPeace-Light.ttf);
+        }
+        html, body {
+            height: 100%;
+            font-family: myfont;
+        }
+        body{
+            color: white;
+            background: url(https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/8LOK/image/Kx3PTA8nv2pHelBbVxvavOi0lK0.JPG) no-repeat;
+            background-size: cover;
+        }
+        h1{
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            text-shadow: 5px 5px 10px black;
+        }
+        span{
+            padding: 5px;
+        }
+        span>a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-shadow: 5px 5px 10px black;
+        }
+    </style>
 </head>
 <body>
-    
+    <p><a href="/">홈으로</a></p>
+    <h1>Emotion</h1>
+    <span><a href="">SAD</a></span>
+    <span><a href="">ANGRY</a></span>
+    <span><a href="">HAPPY</a></span>
+    <span><a href="">LOVE</a></span>
 </body>
 </html>
