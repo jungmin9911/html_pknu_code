@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'myFont';
-    src: url(/font/high1\ Wonchuri\ Title\ M.ttf);
+    src: url(/font/GalmuriMono9.ttf);
 }
 body{
     background-color: aliceblue;
@@ -12,4 +12,11 @@ body{
     margin: 0 auto; 
     min-height: 780px;
     border: 1px solid #000;
+}
+#main_body{
+    position: relative;
+    /* width: 1380px; */
+    /* height: 100%; */
+    margin: 0 auto;
+    border: 1px solid blue;
 }
