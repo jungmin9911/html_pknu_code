@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p:first-child {
+            color: #3A6D8C;
+        } */
+        p:nth-child(2)::after {
+            content: " 정민";
+            color: #6A9AB0;
+        }
+        p::before {
+            content: "🌙";
+        }
+        P:nth-child(3) {
+            color: #EAD8B1;
+            background-color: #3A6D8C;
+            display: inline;
+        }
+        p:nth-last-of-type(3)::after {
+            content: "🌙";
+        }
+        p:nth-last-of-type(2)::after {
+            content: " 메로나";
+            color: #009990;
+            font-weight: bold;
+        }
+        p:last-of-type(2)::after {
+            content: " 감사합니다";
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/index.html">홈으로</a></p>
+    <p>나의사랑</p>
+    <p>나의가족</p>
+    <p>행복미래</p>
+    <p>올 때</p>
+    <p>이제 끝</p>
+</body>
+</html>
