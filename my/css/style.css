@@ -7,7 +7,7 @@ body{
     font-family: 'myFont', sans-serif;
 }
 #wrap{
-    width: 100%; 
+    width: 1380px; 
     height:100%;
     margin: 0 auto; 
     min-height: 780px;
