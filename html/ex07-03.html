@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹페이지</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url(../font/PyeongChangPeace-Light.ttf);
+        }
+        html, body {
+            height: 100%;
+            font-family: myfont;
+        }
+        body{
+            color: white;
+            background: url(/img/5.컴퓨터_달력X.png) no-repeat;
+            background-size: cover;
+        }
+        h1{
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+            text-shadow: 5px 5px 10px black;
+        }
+        span{
+            padding: 5px;
+        }
+        span>a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-shadow: 5px 5px 10px black;
+        }
+        @media(min-width:601px) and (max-width: 1000px) {
+            h1 {
+                text-decoration: none;
+                color: tomato;
+            }
+            body {
+                background: url(/img/3.아이패드.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        @media(max-width: 600px) {
+            h1 {
+                text-decoration: none;
+                color: cornflowerblue;
+            }
+            body {
+                /* color: white; */
+                background: url(/img/2.핸드폰_달력X.png) no-repeat;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">홈으로</a></p>
+    <h1>Emotion</h1>
+    <span><a href="">SAD</a></span>
+    <span><a href="">ANGRY</a></span>
+    <span><a href="">HAPPY</a></span>
+    <span><a href="">LOVE</a></span>
+</body>
+</html>
