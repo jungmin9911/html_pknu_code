@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #27548A;
+            animation: mymove 1s infinite ease-in-out;
+        }
+        @keyframes mymove {
+            0% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(250px, 500px);
+                width: 250px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            50% {
+                transform: translate(500px);
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+            75% {
+                transform: translate(250px, 500px);
+                width: 250px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">🏡</a></p>
+    <div></div>
+</body>
+</html>
