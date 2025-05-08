@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        p {
+            position: absolute;
+            top: -15px;
+            left: 10px;
+            font-size: 1.3rem;
+        }
+        #container {
+            width: 920px;
+            border: 3px solid black;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #container > div {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            margin: 20px;
+            font-size: 3rem;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container > div:nth-of-type(1) {
+            background-color: green;
+        }
+        #container > div:nth-of-type(2) {
+            background-color: yellow;
+        }
+        #container > div:nth-of-type(3) {
+            background-color: red;
+        }
+        </style>
+</head>
+<body>
+    <p><a href="/">🏡</a></p>
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>←</div>
+    </div>
+</body>
+</html>
