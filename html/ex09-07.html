@@ -4,6 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: #FFFDEC;
+            padding: 8rem;
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            background-color: #FFE2E2;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;
+            overflow: hidden;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        }
+        .banner {
+            background-image: url("https://img.freepik.com/free-vector/confetti-background-vector-cute-pastel-pink-pattern_53876-105500.jpg");
+            /* background-size: 150px; */
+            display: flex;
+            justify-content: center;
+        }
+        .profile {
+            width: 100px;
+            height: 100px;
+            background-image: url("/img/f9in35p5660ce423x290.jpg");
+            background-size: 100px;
+            border-radius: 50%;
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+            transform: translateY(50%);
+            transition: transform 0.4s ease;
+            /* position: relative; */
+            /* top: 50px; */
+        }
+        .profile:hover {
+            transform: translateY(50%) scale(1.3);
+        }
+        .name {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .follow-btn {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .follow-btn button {
+            font-size: medium;
+            font-weight: bold;
+            background-color: #86A788;
+            border: none;
+            padding: 1rem;
+            outline: none;
+            border-radius: 50px;
+            color: #FFFDEC;
+        }
+        .desc {
+            padding: 30px;
+        }
+    </style>
 </head>
 <body>
     <!-- div.card>div.banner>div.profile^h2.name{Jungmin}+div.follow-btn+div.desc{내용들...} -->
@@ -12,8 +73,10 @@
             <div class="profile"></div>
         </div>
         <h2 class="name">Jungmin</h2>
-        <div class="follow-btn"></div>
-        <div class="desc">내용들...</div>
+        <div class="follow-btn"><button>Follow</button></div>
+        <div class="desc">
+            어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고어쩌고저쩌고
+        </div>
     </div>
 </body>
 </html>
