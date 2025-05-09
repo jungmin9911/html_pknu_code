@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            background-color: #443627;
+            color: #F2F6D0;
+            padding: 15px 30px;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #F2F6D0;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            height: 90vh;
+        }
+        .sidebar {
+            background-color: #D98324;
+            color: #F2F6D0;
+            padding: 1rem;
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+        }
+        .main {
+            flex: 1;
+            background-color: #F3F3E0;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.navbar>div.logo{MySite}+div.menu>a{Home}*3 -->
+    <div class="navbar">
+        <div class="logo">MySite</div>
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">Home</a>
+            <a href="">Home</a>
+        </div>
+    </div>
+    <!-- div.container>div.sidebar>h2{메뉴}+a{대시보드}*3^div.main>h1{Flex 기반 대시보드}+p{페이지설명} -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>메뉴</h2>
+            <a href="">대시보드</a>
+            <a href="">사용자 관리</a>
+            <a href="">설정</a></div>
+        <div class="main">
+            <h1>Flex 기반 대시보드</h1>
+            <p>
+                페이지설명페이지설명페이지설명페이지설명페이지설명페이지설명
+                페이지설명페이지설명페이지설명페이지설명페이지설명페이지설명
+                페이지설명페이지설명페이지설명페이지설명페이지설명페이지설명
+            </p>
+        </div>
+    </div>
+</body>
+</html>

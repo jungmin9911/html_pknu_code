@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: azure;
+            padding: 2rem;
+        }
+        .chat-container {
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+        .message {
+            display: flex;
+            margin-bottom: 1.2rem;
+            align-items: end;
+        }
+        .message.bot {
+            justify-content: start;
+        }
+        .message.user {
+            justify-content: end;
+        }
+        .bubble {
+            width: 300px;
+            position: relative;
+            background-color: #ddd;
+            padding: 0.7rem 2rem;
+            border-radius: 20px;
+            word-break: break-word;
+            text-align: center;
+        }
+        .user .bubble {
+            background-color: gold;
+        }
+        .user .name {
+            text-align: right;
+        }
+        .name {
+            font-size: 0.9rem;
+            color: #000;
+            margin: 0 10px 10px;
+            /* padding: 1.2rem; */
+        }
+        .chat-container::-webkit-scrollbar:vertical {
+            background-color: #444;
+        }
+        .chat-container::-webkit-scrollbar-thumb:vertical {
+            background-color: #183B4E;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.chat-container>div.message.bot>div.avatar>div.name{myBot}+div.bubble{안녕하세요. 무엇을 도와드릴까요?}^^div.message.user>div>div.name{나}+div.bubble{Flex로 채팅화면을 만들수 있냐?} -->
+    <div class="chat-container">
+        <div class="message bot">
+            <div class="avatar">
+                <div class="name">myBot</div>
+                <div class="bubble">안녕하세요. 무엇을 도와드릴까요?</div>
+            </div>
+        </div>
+        <div class="message user">
+            <div>
+                <div class="name">나</div>
+                <div class="bubble">하이</div>
+            </div>
+        </div>
+        <div class="message bot">
+            <div class="avatar">
+                <div class="name">myBot</div>
+                <div class="bubble">네 안녕하세요 😊</div>
+            </div>
+        </div>
+        <div class="message user">
+            <div>
+                <div class="name">나</div>
+                <div class="bubble">집 가고싶어</div>
+            </div>
+        </div>
+        <div class="message bot">
+            <div class="avatar">
+                <div class="name">myBot</div>
+                <div class="bubble">저도 가고싶어요 😭</div>
+            </div>
+        </div>
+        <div class="message user">
+            <div>
+                <div class="name">나</div>
+                <div class="bubble">집 보내줘</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

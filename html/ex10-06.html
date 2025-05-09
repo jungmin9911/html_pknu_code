@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: antiquewhite;
+        }
+        .container {
+            display: flex;
+            gap: 10px;
+            background-color: #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .box {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 0;
+            border-radius: 8px;
+            color: #ddd;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .box1 {
+            background-color: #309898;
+        }
+        .box2 {
+            background-color: #FF9F00;
+        }
+        .box3 {
+            background-color: #F4631E;
+        }
+        .container:first-of-type .box1{
+            flex: 1 1 0;
+        }
+        .container:first-of-type .box2{
+            flex: 2 1 0;
+        }
+        .container:first-of-type .box3{
+            flex: 3 1 0;
+        }
+        .container:nth-of-type(2) .box1{
+            flex: 0 1 300px;
+        }
+        .container:nth-of-type(2) .box2{
+            flex: 0 2 300px;
+        }
+        .container:nth-of-type(2) .box3{
+            flex: 0 3 300px;
+        }
+        .container:last-of-type .box1{
+            flex: 0 1 100px;
+        }
+        .container:last-of-type .box2{
+            flex: 0 1 200px;
+        }
+        .container:last-of-type .box3{
+            flex: 0 1 300px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">🏡</a></p>
+    <!-- (h2{$ flex 비교}+div.container>div.box.box$*3)*3 -->
+    <h2>1 flex-grow 비교</h2>
+    <div class="container">
+        <div class="box box1">grow: 1</div>
+        <div class="box box2">grow: 2</div>
+        <div class="box box3">grow: 3</div>
+    </div>
+    <h2>2 flex-shrink 비교</h2>
+    <div class="container">
+        <div class="box box1">shrink: 1</div>
+        <div class="box box2">shrink: 2</div>
+        <div class="box box3">shrink: 3</div>
+    </div>
+    <h2>3 flex-basis 비교</h2>
+    <div class="container">
+        <div class="box box1">basis: 100px</div>
+        <div class="box box2">basis: 200px</div>
+        <div class="box box3">basis: 300px</div>
+    </div>
+</body>
+</html>
