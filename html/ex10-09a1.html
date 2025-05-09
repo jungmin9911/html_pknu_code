@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --myb1: #89AC46;
+            --myb2: #D3E671;
+            --myb3: #F8ED8C;
+            --myg1: #C7DB9C;
+            --myg2: #FFF0BD;
+            --myg3: #FDAB9E;
+            --myr1: #FF8989;
+            --myr2: #E50046;
+            --myr3: #690B22;
+        }
+        div {
+            margin: 3px;
+            border: 1px solid #555;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+        .wrap {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px 200px 100px 100px;
+        }
+        #grid1 {
+            background-color: var(--myb1);
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #grid2 {
+            background-color: var(--myb2);
+        }
+        #grid3 {
+            background-color: var(--myb3);
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #grid4 {
+            background-color: var(--myg1);
+        }
+        #grid5 {
+            background-color: var(--myg2);
+        }
+        #grid6 {
+            background-color: var(--myg3);
+        }
+        #grid7 {
+            background-color: var(--myr1);
+        }
+        #grid8 {
+            background-color: var(--myr2);
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.wrap>div#grid${GRID$}*8 -->
+    <div class="wrap">
+        <div id="grid1">GRID1</div>
+        <div id="grid2">GRID2</div>
+        <div id="grid3">GRID3</div>
+        <div id="grid4">GRID4</div>
+        <div id="grid5">GRID5</div>
+        <div id="grid6">GRID6</div>
+        <div id="grid7">GRID7</div>
+        <div id="grid8">GRID8</div>
+    </div>
+</body>
+</html>
