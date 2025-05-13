@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const score = prompt("점수를 입력해주세요");
+
+        document.write(`<h3>입력된 점수 : ${score}</h3>`);
+        if (score == 100) {
+            alert("A++ 입니다.");
+            console.log("A++ 입니다.");
+            document.write("A++ 입니다.");
+        } else if (90 <= score && score < 100) {
+            alert("A 입니다.");
+            console.log("A 입니다.");
+            document.write("A 입니다.");
+        } else if (80 <= score && score < 90) {
+            alert("B 입니다.");
+            console.log("B 입니다.");
+            document.write("B 입니다.");
+        } else if (70 <= score && score < 80) {
+            alert("C 입니다.");
+            console.log("C 입니다.");
+            document.write("C 입니다.");
+        } else if (60 <= score && score < 70) {
+            alert("D 입니다.");
+            console.log("D 입니다.");
+            document.write("D 입니다.");
+        } else if (60 > score) {
+            alert("F 입니다.");
+            console.log("F 입니다.");
+            document.write("F 입니다.");
+        } else {
+            alert("잘못된 점수를 입력하셨습니다.");
+            console.log("잘못된 점수를 입력하셨습니다.");
+            document.write("잘못된 점수를 입력하셨습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
