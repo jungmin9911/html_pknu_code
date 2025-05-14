@@ -30,6 +30,16 @@
         tr:nth-of-type(2) td:nth-last-child(-n+6) {
             background-color: orangered;
         }
+        h3 {
+            animation: aa 2s infinite ease;
+        }
+        @keyframes aa {
+            0% {color: tomato;}
+            25% {color: gold;}
+            50% {color: cornflowerblue;}
+            75% {color: gold;}
+            100% {color: tomato;}
+        }
     </style>
     <script>
         const temp = prompt("현재 온도를 입력해주세요.")

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리배치도</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        table {
+            position: absolute;
+            top: 100px;
+            text-align: center;
+            border-collapse: collapse;
+            min-width: 200px;
+        }
+        th,
+        tr,
+        td {
+            border: 2px solid #F564A9;
+            padding: 10px 15px;
+            /* background-color: #FAE3C6; */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const sit = prompt("한줄에 몇명 앉을 수 있습니까?")
+        const student = prompt("총 인원은 몇명입니까?")
+        let list = "<h1>자리배치도</h1><table>";
+        list += '<tr>';
+        for (let i=1 ; i<=student ; i++) {
+            if (i%sit==0){
+                list += `<td>좌석${i}</td></tr>`;    
+            }else {
+                list += `<td>좌석${i}</td>`;
+            }
+        }
+        list += "</table>";
+        document.body.innerHTML = list;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+        div {
+            padding: 0;
+            margin: 0;
+            background: url("https://feelstory.com/gnu/nori/img/2_on.png") no-repeat;
+            width: 200px;
+            height: 200px;
+        }
+        .zzi {
+            background: url("https://feelstory.com/gnu/nori/img/1_on.png") no-repeat;
+            /* background-position: -138px 0; */
+        }
+        .bba {
+            background: url("https://feelstory.com/gnu/nori/img/3_on.png") no-repeat;
+            /* background-position: -280px 0; */
+            /* width: 160px; */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const now = dayjs();
+        const random = now.get("ms") % 3;
+        console.log(random);
+
+        if (random==0) {
+            document.body.innerHTML = `<div class="muk"></div>`;
+        } else if (random==1) {
+            document.body.innerHTML = `<div class="zzi"></div>`;
+        } else {
+            document.body.innerHTML = `<div class="bba"></div>`;
+        }
+    </script>
+</body>
+</html>
