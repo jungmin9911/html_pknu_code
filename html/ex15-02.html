@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ran = Math.floor(Math.random()*100)
+        let list = "";
+        if (ran < 3) {
+            list += `<h1>비스트 이터널슈가쿠키 출현</h1>`;
+        } else if (ran <10) {
+            list += `<h1>에픽등급 의적맛쿠키 출현</h1>`;
+        } else if (ran < 40) {
+            list += `<h1>노말등급 칠리맛쿠키 출현</h1>`;
+        } else {
+            list += `<h1>커먼등급 용감한쿠키 출현</h1>`;
+        }
+
+        list += `<hr>랜덤 수치는 ${ran} 값입니다.`
+        document.body.innerHTML = list;
+    </script>
+</body>
+</html>
