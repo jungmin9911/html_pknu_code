@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myscope() {
+            var a = "나는 var의 a입니다";
+            console.log(a);
+            {
+                var b = "나는 var의 b입니다";
+                var c = "나는 var의 c입니다";
+            }
+            console.log(b);
+            console.log(c);
+        }
+        myscope();
+    </script>
+</body>
+</html>
