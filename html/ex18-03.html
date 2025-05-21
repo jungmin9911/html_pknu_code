@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pt(name) {
+            console.log(name + "안녕");
+        }
+        setTimeout( function () {
+            pt("홍길동");
+        }, 1000);
+        setTimeout(() => pt("홍"), 2000);
+        setTimeout(pt, 3000);
+        // addEventListener('click', pt)
+        
+        // py import time 
+        // print("안녕")
+        // time.sleep(1000)
+        // print("안녕")
+    </script>
+</head>
+<body>
+    <h1>곧 변합니다</h1>
+    <script>
+        // 방식 1
+        setTimeout(() => {
+            const h1 = document.querySelector('h1');
+            h1.textContent = "변했어요"
+        }, 4000);
+        // 방식 2
+        // setTimeout(() => document.querySelector('h1').textContent = "변했어요", 4000);
+        // 방식 3 - 인자 넣기
+        const cc = (text) => {
+            const h1 = document.querySelector("h1");
+            h1.textContent = text;
+        };
+        setTimeout(() => cc("우와"), 4000);
+        setTimeout(() => cc("드디어"), 5000);
+        setTimeout(() => cc("변했다"), 6000);
+        // 방식 4 - 인자 넣기
+        setTimeout(cc, 7000, "zzz");
+        setTimeout(cc, 8000, "또");
+        setTimeout(cc, 9000, "변한다");
+    </script>
+</body>
+</html>
