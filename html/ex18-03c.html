@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .watch {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+        /* .hour {
+            border: 2px solid black;
+        } */
+         .num {
+            text-align: center;
+         }
+        .hour {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 4px;
+            height: 225px;
+            transform-origin: bottom center;
+            background-color: black;
+            transform: rotate(0deg);
+        }
+        .min {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 4px;
+            height: 225px;
+            transform-origin: bottom center;
+            background-color: #777;
+            transform: rotate(0deg);
+        }
+        .sec {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            width: 2px;
+            height: 225px;
+            transform-origin: bottom center;
+            background-color: red;
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- [동아리 숙제]
+    바늘시계를 만들어라. css, html, js
+
+    힌트, 
+    바늘 3개,
+    각도 360도,
+    1초당 6도,
+    현재시간에 맞추어 움직이기
+
+    초바늘이 한바퀴 돌면 긴바늘이 한칸 움직여야 되거나(그 비율만큼 움직이기) -->
+    <div class="watch">
+        <div class="num">
+            12
+            <div class="hour"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+        </div>
+    </div>
+    <script>
+        let seconds = 0;
+        let minute = 0;
+        let secDeg = 0;
+        let minDeg = 0;
+        let hourDeg = 0;
+
+        const secHand = document.querySelector('.sec');
+        const minHand = document.querySelector('.min');
+        const hourHand = document.querySelector('.hour');
+
+        setInterval(() => {
+            seconds++;
+            secDeg = seconds * 6;
+            secHand.style.transform = `rotate(${secDeg}deg)`;
+
+            if (seconds%60 === 0) {
+                minute++;
+                minDeg += 6;
+                minHand.style.transform = `rotate(${minDeg}deg)`;
+                if (minute%60 === 0) {
+                    hourDeg += 30;
+                    hourHand.style.transform = `rotate(${hourDeg}deg)`;
+                }
+            }
+            // minDeg += 0.1;
+            // hourDeg += 0.01;
+
+            // hourHand.style.transform = `rotate(${hourDeg}deg)`;
+        }, 1000);
+    </script>
+</body>
+</html>
