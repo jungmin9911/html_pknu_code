@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머 시계</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        #digital {
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+        .clock {
+            width: 300px;
+            height: 300px;
+            border: 5px solid black;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            transform: rotate(0deg);
+            transition: transform 0.05s linear;
+        }
+        .second {
+            width: 2px;
+            height: 120px;
+            background-color: red;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+        button {
+            font-size: 1.2rem;
+            margin: 0 10px;
+            padding: 10px 20px;
+        }
+        #logList {
+            margin-top: 30px;
+            text-align: center;
+            font-family: monospace;
+        }
+        #logList li {
+            list-style: none;
+            font-size: 1.2rem;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>디지털 타이머</h2>
+        <div id="digital">00:00:00.00</div>
+
+        <h2>아날로그 타이머 (1초마다 한 바퀴)</h2>
+        <div class="clock">
+        <div class="hand second" id="secondHand"></div>
+        </div>
+
+        <div class="buttons">
+        <button onclick="startTimer()">시작</button>
+        <button onclick="stopTimer()">멈춤</button>
+        <button onclick="logTime()">기록</button>
+        <button onclick="resetTime()">초기화</button>
+        <!-- ✅ 기록 버튼 추가 -->
+        </div>
+
+        <!-- ✅ 기록 저장 리스트 -->
+        <ul id="logList"></ul>
+
+        <script>
+            let startTime = 0;
+            let elapsed = 0;
+            let timerId = null;
+
+            function formatWithDecimal(ms) {
+                const sec = ms / 1000;
+                const hrs = String(Math.floor(sec / 3600)).padStart(2, "0");
+                const mins = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
+                const secs = String(Math.floor(sec % 60)).padStart(2, "0");
+                const fraction = String(Math.floor((sec % 1) * 100)).padStart(2, "0");
+                return `${hrs}:${mins}:${secs}.${fraction}`;
+            }
+
+            function updateTimer() {
+                const now = Date.now();
+                const diff = now - startTime;
+
+                // 디지털 시계 업데이트
+                document.getElementById("digital").textContent =
+                formatWithDecimal(diff);
+
+                // 초침 회전
+                const fullSeconds = diff / 1000;
+                const deg = fullSeconds * 360;
+                document.getElementById(
+                "secondHand"
+                ).style.transform = `rotate(${deg}deg)`;
+            }
+
+            function startTimer() {
+                if (timerId) return;
+                startTime = Date.now() - elapsed;
+                timerId = setInterval(updateTimer, 10);
+            }
+
+            function stopTimer() {
+                clearInterval(timerId);
+                timerId = null;
+                elapsed = Date.now() - startTime;
+            }
+
+            // ✅ 기록 버튼 함수
+            function logTime() {
+                if (!startTime) return; // 시작하지 않았다면 무시
+                const now = Date.now();
+                const diff = now - startTime;
+                const formatted = formatWithDecimal(diff);
+
+                const li = document.createElement("li");
+                li.textContent = `기록: ${formatted}`;
+                document.getElementById("logList").appendChild(li);
+            }
+
+            function resetTime() {
+                timerId = 0;
+                // const reset = () => {
+                //     // clearTimeout(timerId);
+                // }
+            }
+        </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <script>
+        const rects = document.querySelectorAll('.rect');
+        rects.forEach((rect, i) => {    // rect의 인덱스(i)만큼 반복
+            const width = (i+1)*100;    // 사이즈를 점점 키우기
+            const url =`https://placecats.com/${width}/300`;
+            console.log(rect);
+            rect.src = url
+        })
+    </script>
+</body>
+</html>
