@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssText</title>
+    <style>
+        h1 {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 2.5rem; text-align: end; color: blue;">cssText의 속성을 알아보자</h1>
+    <button>값 읽어오기</button>
+    <button>스타일1</button>
+    <button>스타일2</button>
+    <p></p>
+    <script>
+        const h1 = document.querySelector("h1");
+        const p = document.querySelector("p");
+        const btns = document.querySelectorAll("button");
+
+        btns[0].addEventListener("click", () => {   // 0번째 버튼을 클릭하는 이벤트가 발생하면
+            p.innerHTML = h1.style.cssText;     // css를 가져와 화면에 출력하라
+        });
+        btns[1].addEventListener("click", () => {   // 0번째 버튼을 클릭하는 이벤트가 발생하면
+            h1.style.cssText = "font-size: 1rem; text-align: start; color: chartreuse;";     // 
+        });
+        btns[2].addEventListener("click", () => {   // 0번째 버튼을 클릭하는 이벤트가 발생하면
+            h1.style.cssText = "font-size: 2rem; text-align: end; color: green;";
+        });
+    </script>
+</body>
+</html>
