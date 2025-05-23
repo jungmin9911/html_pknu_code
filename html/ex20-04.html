@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const header = document.createElement("hi");
+            header.textContent = "문서 객체 동적으로 생성중..."
+            header.style.color = "white";
+            header.style.backgroundColor = "brown";
+            header.setAttribute("id", "head");
+            // header.setAttribute("class", "title main line1");
+            header.classList.add("title");
+            document.body.appendChild(header);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

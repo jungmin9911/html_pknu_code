@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: myfont;
+            src: url("/ref/Mabinogi_Classic_TTF.ttf");
+        }
+        body {
+            font-family: myfont;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background-color: antiquewhite;
+            margin: 5px 0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 200px;
+            transition: 0.6s ease;
+        }
+        li:hover {
+            background-color: burlywood;
+            width: 210px;
+            font-size: 1.1rem;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const items = [
+                "Apple",
+                "peach",
+                "pear",
+                "cherry",
+                "strawberry",
+                "lemon",
+                "orange",
+                "banana"
+            ];
+
+            const ul = document.createElement('ul');
+            document.body.appendChild(ul);
+            items.forEach((v) => {
+                const li = document.createElement("li");
+                ul.appendChild(li);
+                li.textContent = v;
+            })
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
