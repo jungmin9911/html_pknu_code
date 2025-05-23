@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const obj = [];
+        // 동적으로 객체속성 추가
+        obj.a = 1;
+        obj.b = 2;
+        obj.e = "실수";
+        obj["c"] = function () {
+            return this.b;
+        };
+        obj.d = function () {
+            console.log(this.a);
+        };
+
+        // 객체의 속성과 메서드 호출
+        console.log(obj);
+        console.log(obj.c());
+        obj.d();
+
+        // 삭제
+        delete obj.e;
+        console.log(obj);
+
+        console.log("==========================================")
+        // 객체 선언
+        const student = {}
+        student.이름 = '윤인성'
+        student.취미 = '악기'
+        student.장래희망 = '생명공학자'
+
+        // 출력
+        console.log(JSON.stringify(student, null, 2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
