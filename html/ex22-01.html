@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new TypeIt('#typeit', {
+                speed: 50,
+                startDelay: 300,
+            })
+              .type('안녕하세요! 반갑습니다. 😊', {delay: 1000})
+              .move(-6, {delay: 100})
+              .delete(15, {delay: 500})
+              .type("사실 안 반갑습니다. 집에 가고싶", {delay: 1000})
+              .go();
+        });
+    </script>
+</head>
+<body>
+    <h1 id="typeit"></h1>
+</body>
+</html>
