@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            height: 180px;
+            text-align: center;
+            padding: 50px;
+            color: #FEFAE0;
+            /* display: none; */
+        }
+        #about {
+            background-color: #C0C78C;
+        }
+        #products {
+            background-color: #A6B37D;
+        }
+        #technology {
+            background-color: #F7DCB9;
+        }
+        #downloads {
+            background-color: #B99470;
+        }
+        #etc {
+            background-color: #674636;
+        }
+        .tab {
+            float: left;
+            background-color: #999;
+            color: #FEFAE0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 1.1rem;
+            width: 20%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="about" class="content">
+        <h1>About</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid distinctio error vero, eum deserunt odit laborum, minus aspernatur temporibus recusandae sint voluptatibus quisquam. Iste rem perspiciatis at odio sapiente perferendis.</p>
+    </div>
+    <div id="products" class="content">
+        <h1>Products</h1>
+        <p>
+            consectetur!
+        </p>
+    </div>
+    <div id="technology" class="content">
+        <h1>Technology</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum quaerat dolorem vel incidunt iste alias modi tempore hic quia sequi tenetur assumenda, deserunt magni et molestias voluptates perspiciatis quas!
+        </p>
+    </div>
+    <div id="downloads" class="content">
+        <h1>Downloads</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum
+    </div>
+    <div id="etc" class="content">
+        <h1>Etc</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, beatae. Dolore in veritatis ducimus vitae quam quae tempora! Unde autem sunt voluptas ad vel aut placeat odio id dolorem itaque.
+        </p>
+    </div>
+
+    <!-- div.tab-container>button.tab*5 -->
+    <div class="tab-container">
+        <button class="tab" onclick="openMenu('about', this, '#C0C78C')">About</button>
+        <button class="tab" onclick="openMenu('products', this, '#A6B37D')">products</button>
+        <button class="tab" onclick="openMenu('technology', this, '#F7DCB9')">Technology</button>
+        <button class="tab" onclick="openMenu('downloads', this, '#B99470')">Downloads</button>
+        <button class="tab" onclick="openMenu('etc', this, '#674636')">Etc</button>
+    </div>
+
+    <script>
+        const contents = document.querySelectorAll('.content');
+        const tabs = document.querySelectorAll('.tab');
+        const openMenu = (targetId, currentBtn, color) => {
+            contents.forEach((v) => {
+                v.style.display = 'none';
+            });
+            tabs.forEach((v) => {
+                v.style.backgroundColor = '#999';
+                v.style.color = '#FEFAE0';
+            });
+            document.getElementById(targetId).style.display = 'block';
+            currentBtn.style.backgroundColor = color;
+
+            // currentBtn.style.backgroundColor = color;
+            // currentBtn.style.color = '#333';
+        };
+    </script>
+</body>
+</html>
