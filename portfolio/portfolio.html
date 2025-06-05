@@ -14,7 +14,7 @@
     <header>
         <nav>
             <ul>
-                <li><h1>Portfolio</h1></li>
+                <li><h1 style="font-size: 32px;">Profile</h1></li>
                 <li><img src="/img/f9in35p5660ce423x290.jpg" alt="증명사진" style="width: 200px;"></li><br>
                 <li><span class="material-symbols-outlined">person</span>안정민</li>
                 <li><span class="material-symbols-outlined">cake</span>1999.11.09</li>
@@ -108,9 +108,8 @@
                 <hr>
                 <div class="text">
                     <h2>프로젝트</h2>
-                    <div class="p_p">카드 클릭시 깃허브 링크로 이동</div>
                     <div class="project">
-                        <div class="pcard">
+                        <div class="pcard" data-tooltip="카드 클릭시 깃허브 링크로 이동">
                             <p>놀이공원 홈페이지</p>
                             <div class="p_day">
                                 신촌 이젠아카데미 (팀 프로젝트) | 2023.05 ~ 2023.06 (2주)
@@ -133,7 +132,8 @@
                                 PyQt를 활용하여 음료 주문이 가능한 카페 키오스크 구현
                             </div>
                             <div class="p_my">
-                                맡은 부분
+                                맡은 부분<br>
+                                - 사용자 페이지
                             </div>
                         </div>
                         <div class="pcard">
@@ -150,6 +150,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tooltip" id="tooltip"></div>
                 </div>
             </div>
         </div>

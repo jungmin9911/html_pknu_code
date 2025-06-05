@@ -20,3 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
 //     //   .type("사실 안 반갑습니다. 집에 가고싶", {delay: 1000})
 //         .go();
 // });s
+
+const cards = document.querySelectorAll(".pcard");
+const tooltip = document.getElementById("tooltip");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+            const message = card.dataset.tooltip;
+            tooltip.style.left = e.pageX + 10 + "px";
+            tooltip.style.top = e.pageY + 10 + "px";
+            tooltip.innerText = message;
+            tooltip.style.display = "block";
+        });
+
+    card.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+});
