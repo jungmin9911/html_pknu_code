@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     height: 200vh;
-    color: #2C3930;
+    background-color: #F2F2F2;
     font-family: 'MyFont';
 }
 html {
@@ -19,7 +19,7 @@ html {
 }
 a {
     text-decoration: none;
-    color: #2C3930;
+    color: #000;
 }
 
 /* 메뉴바 */
@@ -30,7 +30,7 @@ header {
     width: 23%;
     height: 100%;
     text-align: center;
-    background-color: #A9B388;
+    background-color: #B6B09F;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     /* display: flex; */
@@ -66,14 +66,14 @@ main {
 #first {
     display: flex;
     /* justify-content: center; */
-    padding-left: 150px;
+    padding-left: 10%;
     align-items: center;
     height: 130px;
     font-size: 24px;
 }
 #second {
     display: flex;
-    padding-left: 150px;
+    padding-left: 10%;
     height: 120px;
     font-size: 20px;
 }
@@ -88,7 +88,7 @@ main {
     padding: 10px 0;
 }
 .card {
-    padding-left: 150px;
+    padding-left: 10%;
     width: 80%;
 }
 .text {
@@ -110,7 +110,7 @@ main {
     margin-right: 10px;
     text-align: center;
     border-radius: 15px;
-    border: 1px solid #83936298;
+    border: 1px solid #000;
 }
 
 /* 교육 */
@@ -143,7 +143,7 @@ main {
     cursor: pointer;
     margin: 0 15px 20px 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    background-color: #FEFAE0;
+    background-color: #EAE4D5;
     transition: transform 0.2s ease;
 }
 .pcard:hover {
@@ -154,6 +154,10 @@ main {
 }
 .p_day, .p_info, .p_my {
     padding-bottom: 10px;
+}
+.p_my span {
+    font-size: 14px;
+    color: #aaa;
 }
 .p_day {
     font-size: 14px;
@@ -176,15 +180,120 @@ main {
 
 /* 줄 */
 hr {
-    background: #83936298;
+    background: #B6B09F;
     height: 0.15rem;
     border: 0;
 }
 
-@media(min-width:601px) and (max-width: 1300px) {
-    
+@media(min-width:1300px) and (max-width: 1500px) {
+    /* 프로젝트 */
+    .project {
+        flex-wrap: column;
+    }
+    .pcard {
+        width: 44%;
+    }
 }
 
-@media(max-width: 600px) {
-            
+@media(min-width:1120px) and (max-width: 1300px) {
+    /* 메뉴바 */
+    header {width: 30%;
+    }
+
+    /* 메인 박스 */
+    main {
+        position: relative;
+        margin-right: 30%;
+        padding: 20px;
+    }
+
+    /* 인사말 */
+    #first {
+        display: flex;
+        padding-left: 10%;
+        align-items: center;
+        height: 130px;
+        font-size: 24px;
+    }
+    #second {
+        display: flex;
+        padding-left: 10%;
+        height: 120px;
+        font-size: 20px;
+    }
+
+    /* 내용 */
+    .card {
+        padding-left: 10%;
+        width: 85%;
+    }
+
+    /* 교육 */
+    .edu h2 {
+        display: block;
+    }
+    .edu_a {
+        padding-left: 0px;
+        color: #aaa;
+    }
+
+    /* 프로젝트 */
+    .project {
+        flex-wrap: column;
+    }
+    .pcard {
+        width: 100%;
+    }
+}
+
+@media(max-width: 1200px) {
+    /* 메뉴바 */
+    header {
+        width: 30%;
+    }
+
+    /* 메인 박스 */
+    main {
+        position: relative;
+        margin-right: 30%;
+        padding: 20px;
+    }
+
+    /* 인사말 */
+    #first {
+        display: flex;
+        padding-left: 8%;
+        align-items: center;
+        height: 130px;
+        font-size: 20px;
+    }
+    #second {
+        display: flex;
+        padding-left: 8%;
+        height: 120px;
+        font-size: 16px;
+    }
+
+    /* 내용 */
+    .card {
+        padding-left: 8%;
+        width: 85%;
+    }
+
+    /* 교육 */
+    .edu h2 {
+        display: block;
+    }
+    .edu_a {
+        padding-left: 0px;
+        color: #aaa;
+    }
+
+    /* 프로젝트 */
+    .project {
+        flex-wrap: column;
+    }
+    .pcard {
+        width: 100%;
+    }
 }
