@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>전통시장 API 호출 예제</title>
+</head>
+
+<body>
+    <h1>전통시장 데이터 결과</h1>
+    <pre id="result">결과를 불러오는 중...</pre>
+
+    <script>
+        const url = `https://apis.data.go.kr/B551011/TarRlteTarService1/areaBasedList1?serviceKey=3l%2FV1Hzl5tc8zP1cbyTpG0qoHZTd0ngqiQCvi0Y%2FpAIrpFO3546iPvXSC49KxS5%2BYvVokbzBzL%2F32ysVisJD3Q%3D%3D
+&pageNo=1&numOfRows=10&MobileOS=ETC&MobileApp=AppTest&baseYm=202503&areaCd=11&signguCd=11530&_type=json`;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('서버 응답 오류: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data); // 콘솔 확인용
+                document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error("에러 발생:", error);
+                document.getElementById('result').textContent = "에러 발생: " + error.message;
+            });
+    </script>
+</body>
+
+</html>
