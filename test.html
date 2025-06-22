@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>전통시장 API 호출 예제</title>
+    <title>관광실태조사 API 호출 예제</title>
 </head>
 
 <body>
-    <h1>전통시장 데이터 결과</h1>
+    <h1>부산광역시_관광실태조사 통계정보 서비스</h1>
     <pre id="result">결과를 불러오는 중...</pre>
 
     <script>
-        const url = `https://apis.data.go.kr/B551011/TarRlteTarService1/areaBasedList1?serviceKey=3l%2FV1Hzl5tc8zP1cbyTpG0qoHZTd0ngqiQCvi0Y%2FpAIrpFO3546iPvXSC49KxS5%2BYvVokbzBzL%2F32ysVisJD3Q%3D%3D
-&pageNo=1&numOfRows=10&MobileOS=ETC&MobileApp=AppTest&baseYm=202503&areaCd=11&signguCd=11530&_type=json`;
+        const url = `http://apis.data.go.kr/6260000/BusanTourStaticService2/getVisitorStatInfo2?serviceKey=3l%2FV1Hzl5tc8zP1cbyTpG0qoHZTd0ngqiQCvi0Y%2FpAIrpFO3546iPvXSC49KxS5%2BYvVokbzBzL%2F32ysVisJD3Q%3D%3D&numOfRows=5&pageNo=1&resultType=json`;
 
         fetch(url)
             .then(response => {
